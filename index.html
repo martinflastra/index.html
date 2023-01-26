@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encuesta de Satisfacción</title>
+  <script>
+    function enviarEncuesta() {
+      // Obtener valores seleccionados de las preguntas
+      var pregunta1 = document.querySelector('input[name="pregunta1"]:checked').value;
+      var pregunta2 = document.querySelector('input[name="pregunta2"]:checked').value;
+      // Guardar las respuestas en un objeto JSON
+      var respuestas = {
+        "pregunta1": pregunta1,
+        "pregunta2": pregunta2
+      };
+      // Convertir el objeto JSON a una cadena
+      var respuestasJSON = JSON.stringify(respuestas);
+      // Mostrar las respuestas en una alerta
+      alert(respuestasJSON);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <h3>Pregunta 1</h3>
+    <input type="radio" name="pregunta1" value="Muy satisfecho"> Muy satisfecho<br>
+    <input type="radio" name="pregunta1" value="Satisfecho"> Satisfecho<br>
+    <input type="radio"
